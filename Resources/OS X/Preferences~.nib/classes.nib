@@ -1,0 +1,34 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {"" = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {toggleOption = id; }; 
+            CLASS = Preferences; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                autoconfigure = NSButton; 
+                autoload = NSButton; 
+                drive1wptoggle = NSButton; 
+                drive2wptoggle = NSButton; 
+                fastTapeToggle = NSButton; 
+                firstByteToggle = NSButton; 
+                multiplexedToggle = NSButton; 
+                plus1Toggle = NSButton; 
+                plus3Toggle = NSButton; 
+                prefWindow = NSWindow; 
+                saveStateToggle = NSButton; 
+                sloggerMode = NSMatrix; 
+                sloggerToggle = NSButton; 
+                startFullscreenToggle = NSButton; 
+                volume = NSSlider; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

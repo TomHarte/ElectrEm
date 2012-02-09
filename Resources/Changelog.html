@@ -1,0 +1,152 @@
+<html>
+<head>
+</head>
+<body>
+<h1>
+ElectrEm Change Log</h1>
+<h2>
+Beta 0.6d - ??/01/06
+</h2>
+<ul>
+<li>sound: synchronisation fixes</li>
+<li>some ROM paging fixes, should now follow exactly the same logic as the real Electron, even for seemingly useless configurations</li>
+<li>further tape interrupt fixes</li>
+<li>persistent state fixes: if you disable the feature then eventually reenable it then the state doesn't recede</li>
+<li>general save state fix: malformed memory address chunks should no longer cause infinite hangs and crashes</li>
+<li>modes 0, 1, 2 and 3 timing fix: correctly aligned their 80 cycle CPU execution hole with the 2 Mhz bus, so they no longer give 25 CPU-usable RAM cycles per scanline and instead give the correct 24.</li>
+<li>mode 3 timing fix: 1 Mhz RAM access given on all lines with no pixels</li>
+<li>timing fix: keyboard accesses are now on the 1 Mhz bus</li>
+<li>bug fixed: display would sometimes stop responding to mode &amp; palette changes</li>
+</ul>
+<h2>
+Beta 0.6c - 18/01/06
+</h2>
+<ul>
+<li>sound: fixed an overflow problem that sometimes meant for quite inaccurate sound, Arcadians being a prime example</li>
+<li>boring interrupt stuff: on a tip from Tom Walker, I effected changes in the generation of interrupts while the counter is in tape output mode. Result? Evening Star and Southern Bell now work -- sound and everything!</li>
+<li>moving towards a ROM paging fix per the observations of John Kortink on the Stairway to Hell forums</li>
+<li>there is now the option of running the emulator with a persistent state (i.e. when you start ElectrEm, it puts itself into the same state it was in when you last closed it), though presently it forgets what media you were using</li>
+<li>added a Tape entry on the menubar, analogous to the existing disc entry</li>
+<li>some fast tape loading fixes -- better than before, still imperfect</li>
+<li>fixed bug where if the emulator encountered an opcode that would halt a real Electron forever or one it doesn't understand (which shouldn't really happen anyway), it displays endless warnings to the user</li>
+<li>fixed bug where screen colours were inverted when copied to the clipboard under Intel Mac OS X</li>
+<li>[Mac OS X] downgraded all code to be compatible with the 10.2.8 SDK, hopefully ElectrEm will now work on OS X v10.2 and v10.3</li>
+<li>[Mac OS X] shortcuts added for things in the Disc pull-down menu</li>
+<li>[Windows] hopefully fixed problem with the menu not accepting the first click in the Disc pull-down menu</li>
+<li>[Windows] the emulator configuration is now stored in your user's application data folder rather than with the executable -- means that the emulator configuration is now per user rather than per machine, and hopefully means ElectrEm will work with Windows Vista</li>
+</ul>
+<h2>
+Beta 0.6b - 10/12/06
+</h2>
+<ul>
+<li>[Windows] The emulator now correctly saves fast tape state</li>
+<li>The mapping of caps lock to CTRL is disabled (temporarily?) due to continuing SDL caps lock weirdness</li>
+<li>[Windows] loading and autoloading of files started from the Explorer works again</li>
+<li>[Windows] added .bas as a thing the emulator can associate for you</li>
+<li>seriously shuffled the Preferences dialogues for both Windows and Mac to make the available options and what half of them do much more obvious (and added "start in full screen" option to the Mac version)</li>
+<li>added a couple of extra recognised commandline options</li>
+<li>reworked the readme file, included it in the Windows distribution</li>
+<li>added a warning if the user tries to set a printer target without the Plus 1 enabled</li>
+</ul>
+<h2>
+Beta 0.6 - 4/12/06
+</h2>
+<ul>
+<li>Fixed a concurrency issue that could lead to a crash on hard reset</li>
+<li>Disc drives now respect mid-emulation changes of mind w.r.t. disc drive write protection</li>
+<li>GUI related memory leaks fixed</li>
+<li>Emulator now correctly loads BASIC source files passed to it at startup (e.g. through file associations)</li>
+<li>Reincorporated some fixes from 0.5c that had accidentally fallen by the wayside when I switched machines</li>
+<li>Devolved some configuration stuff from the ProcessPool to Components, which makes the code a bit more modular and therefore easier to maintain</li>
+<li>Fixed BASIC export of ASCII blocks following REM or DATA statements, and string literals</li>
+<li>Added visible notification if the CPU should hit a KILL opcode or an unknown opcode</li>
+<li>Added correct input for square brackets to the text pasting, fixed timing bug where the same physical key needs to be pressed lots of times in succession but with different shifts</li>
+<li>Fixed compatibility issues between 64 kB mode and the fast tape ROM - both now work together</li>
+<li>Made various fixes to make sure configuration changes propagate properly</li>
+<li>Fixed bug whereby autoconfig would install Disc FS ROMs, but not actually enable the Disc hardware</li>
+<li>Fixed bug that meant switching the 64 kB hardware on and off often wasn't handled correctly</li>
+<li>Fixed error that meant that BASIC tokens within the last 8 bytes of a source file weren't necessarily tokenised correctly</li>
+<li>BASIC import/export now works correctly in 64 kB mode</li>
+<li>[Mac OS X] Disabled (non-functional) ROMs entry on the menuar</li>
+</ul>
+<h2>
+Beta 0.6 prerelease - 23/11/06
+</h2>
+<ul>
+<li>Switched ADFS support to use of a pair of E00 ROMs, for better Electron memory availability</li>
+<li>Added emulation of the Plus 1 printer port - output to plaintext or a very limited subset of Epson FX-80 escape codes can be filtered to make an RTF output</li>
+<li>Added BASIC tokeniser and detokeniser for squirting BBC BASIC to and from ASCII text files on your Mac/PC. Autoload functionality added for BASIC source code</li>
+<li>Lots of memory and thread concurrency issues fixed</li>
+<li>[Mac OS X] Added options to enable or disable disc drive write protects to the GUI</li>
+<li>Added support for pasting text into the emulator from the clipboard - reaction is that the emulator types the pasted text into the Electron</li>
+<li>Added menu entry for inserting/ejecting discs into specific drives, which never autoloads</li>
+<li>Added a save state function</li>
+<li>[Mac OS X] Added (non-functional) ROMs entry to the menuar</li>
+</ul>
+<h2>
+Beta 0.5c - 17/04/06
+</h2>
+<ul>
+<li>Further sound fixes, preventing the occasional loss of a sound event and enabling a small optimisation that was otherwise coded but never triggered</li>
+<li>Increased precision for some of the counters related to sound output, making for a more accurate output</li>
+<li>Fixed "Bad ROM" error from new fast tape system by advancing to start of next block of data whenever a long time gap (0.5 seconds or more) is left between attempts to read tape data</li>
+<li>Fixed memory overrun and leakage problems present separately in both the Windows and OS X native GUIs</li>
+<li>Used Guard Malloc to test for any other significant memory allocation/deallocation/overrun problems. My hardware makes the process almost unbearably slow, no others jumped out from the main body of code</li>
+<li>Fixed a mode changing error that could leave the mouse cursor visible when switching to full screen and/or allow it to corrupt the Electron's graphical output</li>
+<li>The emulator no longer forces use of the fast tape hack back onto users every time they restart</li>
+<li>[Mac OS X] Fixed the visible "double mode change" when going full screen</li>
+<li>[Mac OS X] Enabled the more common "full screen" key combination of command+f</li>
+</ul>
+<h2>
+Beta 0.5b - 13/04/06
+</h2>
+<ul>
+<li>Fixed a bug causing sound events not to be enacted with correct timings</li>
+</ul>
+<h2>
+Beta 0.5 mk 2 - 5/03/06 (Mac OS X only)
+</h2>
+<ul>
+<li>Changed default preferences to more sensible choices</li>
+</ul>
+<h2>
+Beta 0.5 - 1/03/06 (Mac OS X), 6/04/06 (Windows)
+</h2>
+<ul>
+<li>Added disc emulation</li>
+<li>Updated Tape-UEF support to latest 0.10 spec</li>
+<li>Brand new fast tape hack, a lot more minimal than before now just traps the ROM routine for reading the next cassette byte</li>
+<li>Fixed some memory map errors where things set to be ROM were still writable</li>
+<li>Completed native GUIs (90% contributed by Ewen Roberts) for both Windows and OS X</li>
+<li>Adopted a version numbering scheme</li>
+<li>[Windows] Updated to latest CSW.dll</li>
+<li>[Windows] Fixed resource file, which previously had an invalid line that some versions of Windows could cope with and others would bail on</li>
+<li>[Windows] Wrote code to work around the variable behaviour towards preserving the total client area by different versions of Windows when calling SetMenu</li>
+</ul>
+<h2>
+Mac OS X v0.2 (by Ewen Roberts)
+</h2>
+<ul>
+<li>Moved to Xcode 1.2</li>
+<li>Emulator now remembers folders where you last opened a file</li>
+<li>Configuration is retained in an OS X plist</li>
+<il>Preference pane (not fully functional yet) added</li>
+<li>Full screen option added to the menubar</li>
+<li>Configuration file handling tidied up</li>
+<li>Platform specific code parts tidied up into a class rather than a bunch of specific functions</li>
+</ul>
+<h2>
+Mac OS X v0.1 (by Ewen Roberts)
+</h2>
+<ul>
+<li>Initial Release. In the words of Gary Partis: "This version works"</li>
+</ul>
+<h2>
+05/05/2004 (Windows), 15/07/2004 (Mac OS X) release
+</h2>
+<ul>
+<li>Achieved full 6502 Test Suite compliance</li>
+<li>[Windows] Added CSW support via Fraser Ross's CSW.dll</li>
+</ul>
+</body>
+</html>

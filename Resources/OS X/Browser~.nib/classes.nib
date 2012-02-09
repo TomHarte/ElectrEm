@@ -1,0 +1,25 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {customiseToolbar = id; displayToolbar = id; }; 
+            CLASS = BrowserToolbar; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {myWindow = NSWindow; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {pickCategory = id; pickFile = id; searchField = id; }; 
+            CLASS = FileBrowser; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                fileList = NSTableView; 
+                fileTree = NSOutlineView; 
+                searchField = NSSearchField; 
+                swirlyThing = NSProgressIndicator; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

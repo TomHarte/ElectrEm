@@ -1,0 +1,265 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICONELECTREM        ICON    DISCARDABLE     "Icon.ico"
+IDI_ADFICON             ICON    DISCARDABLE     "ADF.ICO"
+IDI_UEFICON             ICON    DISCARDABLE     "UEF.ICO"
+IDI_SSDICON             ICON    DISCARDABLE     "SSD.ICO"
+IDI_BASICICON           ICON    DISCARDABLE     "ueficon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_EMUMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...",                    ID_OPEN_FILE
+        MENUITEM "&Save State...",              ID_SAVE_STATE
+        MENUITEM SEPARATOR
+        MENUITEM "S&et Printer Target...",      ID_SET_PRINTER
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_FILE_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Copy",                       ID_COPY_SCREEN
+        MENUITEM "&Paste",                      ID_PASTE_TEXT
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Full Screen\tAlt+Enter",     ID_TOOLS_FULLSCREEN
+        MENUITEM "&Reset\tCtrl+F12",            ID_TOOLS_RESET
+        MENUITEM SEPARATOR
+        MENUITEM "&Preferences",                ID_TOOLS_PREFERENCES
+    END
+    POPUP "&BASIC"
+    BEGIN
+        MENUITEM "&Export BASIC to file...",    ID_BASIC_EXPORT
+        MENUITEM "&Import BASIC from file...",  ID_BASIC_IMPORT
+    END
+    POPUP "&Disc"
+    BEGIN
+        MENUITEM "Insert Disc in Drive 0...",   ID_DISC_INSERT0
+        MENUITEM "Eject Disc from Drive 0",     ID_DISC_EJECT0
+        MENUITEM SEPARATOR
+        MENUITEM "Insert Disc in Drive 1...",   ID_DISC_INSERT1
+        MENUITEM "Eject Disc from Drive 1",     ID_DISC_EJECT1
+    END
+    POPUP "T&ape"
+    BEGIN
+        MENUITEM "Insert Tape...",              ID_TAPE_INSERT
+        MENUITEM "Eject Tape",                  ID_TAPE_EJECT
+        MENUITEM "Rewind Tape to Start",        ID_TAPE_REWIND
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Read Me...",                 ID_HELP_README
+        MENUITEM "&Technical Notes...",         ID_HELP_TECHNICALNOTES
+        , GRAYED
+        MENUITEM "ElectrEm &Website...",        ID_HELP_ELECTREMWEBSITE
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",                   ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PREFSDIALOG DIALOG DISCARDABLE  0, 0, 227, 353
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ElectrEm Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,333,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,170,333,50,14
+    CONTROL         "Load tapes &quickly",IDC_CHECKFASTLOAD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,70,80,10
+    CONTROL         "Use &enhanced graphics if available",IDC_CHECKMULTIPLEX,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,226,127,10
+    GROUPBOX        "Electron hardware configuration",IDC_STATIC,5,55,215,
+                    140
+    CONTROL         "Emulate the First Byte digital joystick interface",
+                    IDC_CHECKFIRSTBYTE,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,15,95,159,10
+    CONTROL         "Emulate the &Plus 1 printer and analogue joystick interface",
+                    IDC_CHECKPLUS1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,
+                    105,196,10
+    CONTROL         "Emulate &disc drives",IDC_CHECKDISK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,118,77,10
+    CONTROL         "Emulate a &modified Electron",IDC_CHECKSLOGGER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,144,103,10
+    CONTROL         "Run Electron at full &BBC Micro speed",IDC_RADIO4,
+                    "Button",BS_AUTORADIOBUTTON,25,178,185,10
+    CONTROL         "Emulate Slogger &turbo board",IDC_RADIOTURBO,"Button",
+                    BS_AUTORADIOBUTTON,25,156,105,10
+    CONTROL         "Emulate Slogger Master &RAM Board (64 kB Electron)",
+                    IDC_RADIOSHADOW,"Button",BS_AUTORADIOBUTTON,25,167,189,
+                    10
+    GROUPBOX        "File types to associate with ElectrEm",IDC_STATIC,5,280,
+                    215,45
+    CONTROL         "&UEF Files",IDC_CHECKUEFFILES,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,295,46,10
+    CONTROL         "&ADF Files",IDC_CHECKADFFILES,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,120,296,46,10
+    CONTROL         "&SSD Files",IDC_CHECKSSDFILES,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,307,47,10
+    CONTROL         "Aut&omatically type commands to execute the inserted file",
+                    IDC_CHECKAUTOLOAD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    15,20,193,10
+    CONTROL         "Automatically &configure Electron to handle the inserted file",
+                    IDC_CHECKAUTOCONFIGURE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,31,198,10
+    GROUPBOX        "Audio and video options",IDC_STATIC,5,200,215,75
+    CONTROL         "Go straight into &full screen mode when the emulator starts",
+                    IDC_CHECKFULLSCREEN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,215,195,10
+    CONTROL         "Write protect drive &0",IDC_CHECKPROTECT0,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,130,80,10
+    CONTROL         "Write protect drive &1",IDC_CHECKPROTECT1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,115,130,80,10
+    CONTROL         "Slider1",IDC_SLIDERVOLUME,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,10,251,205,17
+    CTEXT           "Volume",IDC_STATIC,10,242,205,10
+    CONTROL         "BAS&IC Files",IDC_CHECKBASICFILES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,120,307,53,10
+    GROUPBOX        "Actions to take after File->Open...",IDC_STATIC,5,5,215,
+                    45
+    CONTROL         "&Keep the Electron state across sessions",
+                    IDC_CHECKSAVESTATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    15,81,200,10
+END
+
+IDD_ABOUTDIALOG DIALOG DISCARDABLE  0, 0, 155, 101
+STYLE DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About this program:"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,53,80,50,14
+    ICON            IDI_ICONELECTREM,IDC_STATIC,67,7,20,20
+    CTEXT           "ElectrEm Future",IDC_STATIC,7,31,141,14
+    CTEXT           "ElectrEm version 0.6c",IDC_STATIC,7,49,141,8
+    CTEXT           "Copyright (c) Thomas Harte, 2000-2006",IDC_STATIC,7,59,
+                    141,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_PREFSDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        VERTGUIDE, 115
+        BOTTOMMARGIN, 347
+        HORZGUIDE, 73
+    END
+
+    IDD_ABOUTDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 148
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 94
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR1             CURSOR  DISCARDABLE     "cursor1.cur"
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

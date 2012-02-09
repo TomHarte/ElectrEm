@@ -1,0 +1,130 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: New ElectrEm - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x809 /fo"Release/ElectrEm.res" /i "Resources\Windows" /d "NDEBUG" "\\.PSF\ElectrEm\Resources\Windows\ElectrEm.rc"" 
+Creating temporary file "C:\DOCUME~1\THOMAS~1\LOCALS~1\Temp\RSP6.tmp" with contents
+[
+/nologo /G6 /MD /W3 /GX /O2 /I ".\Resources\Windows" /I "C:\Libs\SDL-1.2.11\include" /I "C:\Libs\zlib-1.2.3" /D "NDEBUG" /D "USE_NATIVE_GUI" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /Fp"Release/ElectrEm.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"\\.PSF\ElectrEm\src\Plus3\Drive\DriveADF.cpp"
+"\\.PSF\ElectrEm\src\Plus3\Drive\DriveBase.cpp"
+"\\.PSF\ElectrEm\SRC\PLUS3\DRIVE\DriveFDI.cpp"
+"\\.PSF\ElectrEm\src\Plus3\Drive\fdi2raw\fdi2raw.c"
+"\\.PSF\ElectrEm\src\Plus3\Helper\Helper.cpp"
+"\\.PSF\ElectrEm\src\Plus3\Drive\Sector.cpp"
+"\\.PSF\ElectrEm\src\Plus3\wd1770.cpp"
+"\\.PSF\ElectrEm\src\Tape\FastTape.cpp"
+"\\.PSF\ElectrEm\src\Tape\FeederCSW.cpp"
+"\\.PSF\ElectrEm\src\Tape\Feeders.cpp"
+"\\.PSF\ElectrEm\src\Tape\FeederUEF.cpp"
+"\\.PSF\ElectrEm\src\Tape\Tape.cpp"
+"\\.PSF\ElectrEm\src\Display.cpp"
+"\\.PSF\ElectrEm\src\DisplayTables.cpp"
+"\\.PSF\ElectrEm\src\DisplayUpdate.cpp"
+"\\.PSF\ElectrEm\src\GUI\Windows\PreferencesDialog.cpp"
+"\\.PSF\ElectrEm\src\HostMachine\HostMachine.cpp"
+"\\.PSF\ElectrEm\src\HostMachine\WindowsHostMachine.cpp"
+"\\.PSF\ElectrEm\src\Configuration\Config.cpp"
+"\\.PSF\ElectrEm\src\Configuration\ConfigurationStore.cpp"
+"\\.PSF\ElectrEm\src\Configuration\ElectronConfiguration.cpp"
+"\\.PSF\ElectrEm\SRC\PLUS1\Plus1.cpp"
+"\\.PSF\ElectrEm\src\6502core.cpp"
+"\\.PSF\ElectrEm\src\6502misc.cpp"
+"\\.PSF\ElectrEm\SRC\BASIC.cpp"
+"\\.PSF\ElectrEm\src\ComponentBase.cpp"
+"\\.PSF\ElectrEm\src\Keyboard.cpp"
+"\\.PSF\ElectrEm\src\Main.cpp"
+"\\.PSF\ElectrEm\src\ProcessPool.cpp"
+"\\.PSF\ElectrEm\src\UEFChunk.cpp"
+"\\.PSF\ElectrEm\src\UEFMain.cpp"
+"\\.PSF\ElectrEm\src\ULA.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\THOMAS~1\LOCALS~1\Temp\RSP6.tmp" 
+Creating temporary file "C:\DOCUME~1\THOMAS~1\LOCALS~1\Temp\RSP7.tmp" with contents
+[
+sdl.lib sdlmain.lib zlib.lib gdi32.lib user32.lib shell32.lib comdlg32.lib advapi32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/ElectrEm.pdb" /machine:I386 /out:"Release/ElectrEm.exe" /libpath:"C:\Libs\zlib-1.2.3" /libpath:"C:\Libs\SDL-1.2.11\lib" 
+.\Release\DriveADF.obj
+.\Release\DriveBase.obj
+.\Release\DriveFDI.obj
+.\Release\fdi2raw.obj
+.\Release\Helper.obj
+.\Release\Sector.obj
+.\Release\wd1770.obj
+.\Release\FastTape.obj
+.\Release\FeederCSW.obj
+.\Release\Feeders.obj
+.\Release\FeederUEF.obj
+.\Release\Tape.obj
+.\Release\Display.obj
+.\Release\DisplayTables.obj
+.\Release\DisplayUpdate.obj
+.\Release\PreferencesDialog.obj
+.\Release\HostMachine.obj
+.\Release\WindowsHostMachine.obj
+.\Release\Config.obj
+.\Release\ConfigurationStore.obj
+.\Release\ElectronConfiguration.obj
+.\Release\Plus1.obj
+.\Release\6502core.obj
+.\Release\6502misc.obj
+.\Release\BASIC.obj
+.\Release\ComponentBase.obj
+.\Release\Keyboard.obj
+.\Release\Main.obj
+.\Release\ProcessPool.obj
+.\Release\UEFChunk.obj
+.\Release\UEFMain.obj
+.\Release\ULA.obj
+.\Release\ElectrEm.res
+]
+Creating command line "link.exe @C:\DOCUME~1\THOMAS~1\LOCALS~1\Temp\RSP7.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+DriveADF.cpp
+DriveBase.cpp
+DriveFDI.cpp
+fdi2raw.c
+\\.PSF\ElectrEm\src\Plus3\Drive\fdi2raw\fdi2raw.c(1743) : warning C4018: '>' : signed/unsigned mismatch
+\\.PSF\ElectrEm\src\Plus3\Drive\fdi2raw\fdi2raw.c(1780) : warning C4018: '>=' : signed/unsigned mismatch
+Helper.cpp
+Sector.cpp
+wd1770.cpp
+FastTape.cpp
+FeederCSW.cpp
+Feeders.cpp
+FeederUEF.cpp
+Tape.cpp
+Display.cpp
+DisplayTables.cpp
+DisplayUpdate.cpp
+PreferencesDialog.cpp
+HostMachine.cpp
+WindowsHostMachine.cpp
+Config.cpp
+ConfigurationStore.cpp
+ElectronConfiguration.cpp
+Plus1.cpp
+6502core.cpp
+6502misc.cpp
+BASIC.cpp
+ComponentBase.cpp
+Keyboard.cpp
+Main.cpp
+ProcessPool.cpp
+UEFChunk.cpp
+UEFMain.cpp
+ULA.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+ElectrEm.exe - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>uef</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>UEF.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>UEF File</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>ssd</string>
+				<string>dsd</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>dfs.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>DFS Disk Image</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>adf</string>
+				<string>adl</string>
+				<string>adm</string>
+				<string>ads</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>adf.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>ADFS Disc Image</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>bas</string>
+				<string>bbc</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>BASIC Code</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>ElectrEm</string>
+	<key>CFBundleGetInfoString</key>
+	<string>ElectrEm — An Acorn Electron Emulator</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.thomasharte.electrem</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>ElectrEm</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>ElectrEm</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>0.7</string>
+	<key>ElectrEm</key>
+	<string>SDL Cocoa App</string>
+	<key>NSMainNibFile</key>
+	<string>SDLMain.nib</string>
+	<key>NSPrincipalClass</key>
+	<string>SDLApplication</string>
+</dict>
+</plist>

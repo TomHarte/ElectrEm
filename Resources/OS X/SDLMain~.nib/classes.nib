@@ -1,0 +1,43 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                addROM = id; 
+                breakEmulator = id; 
+                editCopy = id; 
+                editPaste = id; 
+                ejectDisc = id; 
+                extractBASIC = id; 
+                fullScreenEmulator = id; 
+                importBASIC = id; 
+                insertDisc = id; 
+                myAction = id; 
+                openGame = id; 
+                pauseEmulator = id; 
+                preferencesEmulator = id; 
+                resetEmulator = id; 
+                saveState = id; 
+                setPrinterTarget = id; 
+                showChangeLog = id; 
+                showElectronWorld = id; 
+                showHelp = id; 
+                showLicense = id; 
+                showStairway = id; 
+                showWebSite = id; 
+                toggleKeyboardMap = id; 
+            }; 
+            CLASS = SDLMain; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                ROMmenu = NSMenu; 
+                insertROM = NSMenuItem; 
+                keyboardElk = NSImageView; 
+                keyboardMac = NSImageView; 
+                keyboardPC = NSImageView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}
