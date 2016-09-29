@@ -750,7 +750,13 @@ bool ImportBASIC(char *Filename, Uint8 *Mem)
 		/* get line number */
 			/* skip white space and empty lines */
 			while(Token == ' ' || Token == '\t' || Token == '\r' || Token == '\n')
+			{
 				EatCharacters(1);
+				if (EndOfFile)
+				{
+					break;
+				}
+			}
 				
 			/* end of file? */
 			if(EndOfFile) break;
